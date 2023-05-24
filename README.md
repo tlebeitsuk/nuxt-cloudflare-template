@@ -1,6 +1,6 @@
-# Nuxt 3 + Cloudflare(Pages + D1) Minimal Starter
+# Nuxt + Cloudflare(Pages + D1) Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Nuxt 3](https://nuxt.com) template using [Cloudflare Pages](https://developers.cloudflare.com/pages) for hosting and [Cloudflare D1](https://developers.cloudflare.com/d1) for database.
 
 ## Setup
 
@@ -11,7 +11,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 Provide optional `--location` flag to specify the location of the database.
 
 ```bash
-wrangler d1 create your-database --experimental-backend
+pnpm wrangler d1 create your-database --experimental-backend
 ```
 
 
@@ -19,50 +19,48 @@ wrangler d1 create your-database --experimental-backend
 
 #### Migrations
 
-Generate migrations with Drizzle:
+1. Generate migrations with [Drizzle](https://orm.drizzle.team):
 
 ```bash
 pnpm migrations
 ```
 
-Apply migrations to the database:
+2. Apply migrations to the database:
 
 ```bash
-wrangler d1 migrations apply <DB NAME> --experimentalBackend true
+pnpm wrangler d1 migrations apply <DB NAME> --experimentalBackend true
 ```
 
 Provide `--local` flag to apply migrations to local database.
 
-### App
+## Development
 
-Make sure to install the dependencies:
+1. Make sure to install the dependencies:
 
 ```bash
 pnpm install
 ```
 
-### Development Server
-
-Start the development server:
+2. Start the development server:
 
 ```bash
 pnpm dev
 pnpm pages:dev // Using wrangler but D1 binding does not work
 ```
 
-## Production
+## Deploy
 
 Build the application for production:
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
 Locally preview production build:
 
 ```bash
-pnpm run preview
-pages:preview
+pnpm preview
+pnpm pages:preview
 ```
 
 Deploy to CF Pages:
@@ -70,5 +68,3 @@ Deploy to CF Pages:
 ```bash
 pnpm pages:deploy
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
