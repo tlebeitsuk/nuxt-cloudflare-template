@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-cf-template",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "migrations": "drizzle-kit generate:sqlite",
+    "pages:preview": "wrangler pages dev ./dist",
+    "pages:dev": "wrangler pages dev --proxy 3000 -- pnpm dev",
+    "pages:deploy": "NODE_VERSION=17 pnpm build && wrangler pages deploy ./dist",
+    "pages:tail": "wrangler pages deployment tail"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.3",
+    "@nuxt/devtools": "^0.5.3",
+    "@types/node": "^18",
+    "drizzle-kit": "^0.18.0",
+    "drizzle-orm": "^0.26.0",
+    "eslint": "^8.41.0",
+    "nuxt": "^3.5.1",
+    "wrangler": "^3.0.1"
+  }
+}
