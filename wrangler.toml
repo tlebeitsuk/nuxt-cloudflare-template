@@ -3,3 +3,8 @@ binding = "DB" # i.e. available in your Worker on env.DB
 database_name = ""
 database_id = ""
 migrations_dir = "./server/db/migrations"
+
+[[kv_namespaces]]
+binding = "STORAGE" # i.e. available in your Worker on env.KV
+id = ""
+preview_id = ""

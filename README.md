@@ -1,6 +1,6 @@
-# Nuxt + Cloudflare(Pages + D1) Starter
+# Nuxt + Cloudflare(Pages + D1 + KV) Starter
 
-[Nuxt 3](https://nuxt.com) template using [Cloudflare Pages](https://developers.cloudflare.com/pages) for hosting and [Cloudflare D1](https://developers.cloudflare.com/d1) for database.
+[Nuxt 3](https://nuxt.com) template using [Cloudflare Pages](https://developers.cloudflare.com/pages) for hosting/functions,[Cloudflare D1](https://developers.cloudflare.com/d1) for database, and [Cloudflare KV](https://developers.cloudflare.com/workers/runtime-apis/kv) for storage/cache.
 
 ## Setup
 
@@ -8,11 +8,11 @@
 
 1. Create a D1 database and add to wrangler.toml.
 
-Provide optional `--location` flag to specify the location of the database.
-
 ```bash
 pnpm wrangler d1 create your-database --experimental-backend
 ```
+
+Provide optional `--location` flag to specify the location of the database.
 
 
 2. Open project in CF and under project settings -> Functions, add the binding between your D1 database and the DB variable.
@@ -32,6 +32,19 @@ pnpm wrangler d1 migrations apply <DB NAME> --experimentalBackend true
 ```
 
 Provide `--local` flag to apply migrations to local database.
+
+### KV
+
+1. Create a KV namespace and add to wrangler.toml.
+
+```bash
+pnpm wrangler kv:namespace create "KV_NAME" 
+```
+
+Provide optional `--preview` flag to create a preview namespace.
+
+2. Open project in CF and under project settings -> Variables, add the binding between your KV namespace and the STORAGE variable.
+
 
 ## Development
 
