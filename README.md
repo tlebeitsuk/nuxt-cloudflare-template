@@ -1,22 +1,31 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 + Cloudflare(Pages + D1) Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-### D1
+### Database
 
-Create a D1 database and add to wrangler.tml.
+1. Create a D1 database and add to wrangler.toml.
+
+Provide optional `--location` flag to specify the location of the database.
 
 ```bash
 wrangler d1 create your-database --experimental-backend
 ```
 
-Provide `--location` flag to specify the location of the database.
 
-Open project in CF and under project settings -> Functions, add the binding between your D1 database and the DB variable.
+2. Open project in CF and under project settings -> Functions, add the binding between your D1 database and the DB variable.
 
-#### Apply migrations
+#### Migrations
+
+Generate migrations with Drizzle:
+
+```bash
+pnpm migrations
+```
+
+Apply migrations to the database:
 
 ```bash
 wrangler d1 migrations apply <DB NAME> --experimentalBackend true
@@ -24,27 +33,21 @@ wrangler d1 migrations apply <DB NAME> --experimentalBackend true
 
 Provide `--local` flag to apply migrations to local database.
 
-## Install
+### App
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
 pnpm install
 ```
 
-## Development Server
+### Development Server
 
-Start the development server on `http://localhost:3000`
+Start the development server:
 
 ```bash
-npm run dev
+pnpm dev
+pnpm pages:dev // Using wrangler but D1 binding does not work
 ```
 
 ## Production
@@ -52,13 +55,20 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 Locally preview production build:
 
 ```bash
-npm run preview
+pnpm run preview
+pages:preview
+```
+
+Deploy to CF Pages:
+
+```bash
+pnpm pages:deploy
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
