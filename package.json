@@ -15,10 +15,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.3",
-    "@nuxt/devtools": "^0.5.3",
-    "@types/node": "^18",
+    "@nuxt/devtools": "^0.5.4",
+    "@types/node": "^18.16.14",
     "drizzle-kit": "^0.18.0",
-    "drizzle-orm": "^0.26.0",
+    "drizzle-orm": "^0.26.1",
     "eslint": "^8.41.0",
     "nuxt": "^3.5.1",
     "wrangler": "^3.0.1"
