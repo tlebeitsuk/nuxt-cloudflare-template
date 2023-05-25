@@ -1,10 +1,10 @@
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
-database_name = ""
-database_id = ""
+database_name = "DB NAME"
+database_id = "25f7ea3e-fbef-43e7-a5a6-e2694530c965"
 migrations_dir = "./server/db/migrations"
 
 [[kv_namespaces]]
 binding = "STORAGE" # i.e. available in your Worker on env.KV
-id = ""
-preview_id = ""
+id = "9a49b6cda1824e339eea4721f02f7048"
+preview_id = "abd5e93340934022908e6fac2a6346fe"
