@@ -58,7 +58,7 @@ pnpm install
 
 ```bash
 pnpm dev
-pnpm pages:dev // Using wrangler but D1 binding does not work
+pnpm pages:dev # Using wrangler but D1/KV binding does not work
 ```
 
 ## Deploy
