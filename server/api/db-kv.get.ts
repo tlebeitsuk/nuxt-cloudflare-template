@@ -3,5 +3,5 @@ export default cachedEventHandler(async (event) => {
 
   return { users, generatedAt: new Date().toISOString() }
 }, {
-  swr: true, maxAge: 20,
+  maxAge: 10,
 })
