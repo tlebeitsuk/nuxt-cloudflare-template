@@ -1,6 +1,6 @@
 # Nuxt + Cloudflare(Pages + D1 + KV) Starter
 
-[Nuxt 3](https://nuxt.com) template using [Cloudflare Pages](https://developers.cloudflare.com/pages) for hosting/functions, [Cloudflare D1](https://developers.cloudflare.com/d1) for database, and [Cloudflare KV](https://developers.cloudflare.com/workers/runtime-apis/kv) for storage/cache.
+Serverless [Nuxt 3](https://nuxt.com) template using [Cloudflare Pages](https://developers.cloudflare.com/pages) for hosting/functions, [Cloudflare D1](https://developers.cloudflare.com/d1) for database, and [Cloudflare KV](https://developers.cloudflare.com/workers/runtime-apis/kv) for storage/cache.
 
 ## Setup
 
@@ -58,7 +58,7 @@ pnpm install
 
 ```bash
 pnpm dev
-pnpm pages:dev // Using wrangler but D1 binding does not work
+pnpm pages:dev # Using wrangler but D1/KV binding does not work
 ```
 
 ## Deploy
