@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
   const users = await useDb().select().from(tables.users).all()
 
-  return users
+  return { users, generatedAt: new Date().toISOString() }
 })
