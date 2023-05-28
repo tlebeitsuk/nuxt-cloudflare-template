@@ -2,6 +2,8 @@
 
 Serverless [Nuxt 3](https://nuxt.com) template using [Cloudflare Pages](https://developers.cloudflare.com/pages) for hosting/functions, [Cloudflare D1](https://developers.cloudflare.com/d1) for database, and [Cloudflare KV](https://developers.cloudflare.com/workers/runtime-apis/kv) for storage/cache.
 
+[Demo](https://c3-test.pages.dev)
+
 ## Setup
 
 ### Database
