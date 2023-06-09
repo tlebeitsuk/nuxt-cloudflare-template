@@ -4,6 +4,8 @@ Serverless [Nuxt 3](https://nuxt.com) template using [Cloudflare Pages](https://
 
 [Demo](https://c3-test.pages.dev)
 
+Heavily inspired by [nuxt-todos-edge](https://github.com/Atinux/nuxt-todos-edge).
+
 ## Setup
 
 ### Database
