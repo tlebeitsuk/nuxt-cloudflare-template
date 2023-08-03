@@ -21,6 +21,6 @@
     "drizzle-orm": "^0.26.5",
     "eslint": "^8.42.0",
     "nuxt": "^3.5.3",
-    "wrangler": "^3.0.1"
+    "wrangler": "^3.1.1"
   }
 }
